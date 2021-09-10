@@ -6,8 +6,8 @@ import pygame                               # Imports pygame and other libraries
 
 pygame.init()                               # Pygame is initialised (starts running)
 
-screen = pygame.display.set_mode([700,500]) # Set the width and height of the screen [width,height]
-pygame.display.set_caption("My Game")       # Name your window
+screen = pygame.display.set_mode([700,500]) #-+Name your window
+pygame.display.set_caption("Kai's Dodgegame")
 done = False                                # Loop until the user clicks the close button.
 clock = pygame.time.Clock()                 # Used to manage how fast the screen updates
 black    = (   0,   0,   0)                 # Define some colors using rgb values.  These can be
@@ -15,12 +15,12 @@ white    = ( 255, 255, 255)                 # used throughout the game instead o
 
 # Define additional Functions and Procedures here
 
-# -------- Main Program Loop -----------
+# # -------- Main Program Loop -----------
 while done == False:
 
     for event in pygame.event.get():        # Check for an event (mouse click, key press)
-        if event.type == pygame.QUIT:       # If user clicked close window
-            done = True                     # Flag that we are done so we exit this loop
+        if event.type == pygame.QUIT:
+              done = True                     # Flag that we are done so we exit this loop
 
     # Update sprites here
 

@@ -39,7 +39,9 @@ white    = ( 255, 255, 255)                 # used throughout the game instead o
 # Define additional Functions and Procedures here
 allFallingObjects = pygame.sprite.Group()
 
-42nextApple = pygame.time.get_ticks() = 2500
+nextApple = pygame.time.get_ticks() + 2500
+
+
 # # -------- Main Program Loop -----------
 while done == False:
 
@@ -52,8 +54,8 @@ while done == False:
     if pygame.time.get_ticks() > nextApple:
       nextObject = FallingObject()
       nextObject.setImage("Apple.png")
-nextApple = pygame.time.get_ticks() + 1500
     allFallingObjects.add(nextObject)
+    nextApple = pygame.time.get_ticks() + 1500
 
     for eachObject in (allFallingObjects.sprites()):
         eachObject.moveFallingObjects(5)
